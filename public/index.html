@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <title>Shared Notes App</title>
+  </head>
+  <body>
+    <div class="w-full bg-slate-400 text-white p-3">
+      <h1 class="">Simple Grocery List</h1>
+    </div>
+    <div class="flex items-start justify-center min-h-screen m-2">
+      <div class="p-10 bg-slate-200 rounded-md shadow-md lg:w-96">
+        <p>Add to your list!</p>
+        <input type="text" name="item" id="item" class="border" />
+        <div
+          id="dropdown"
+          class="hidden absolute w-44 z-10 shadow-md overflow-y-auto bg-white max-h-80"
+        ></div>
+        <input
+          type="submit"
+          value="add"
+          id="submit"
+          class="bg-blue-300 px-2 py-1 rounded-md text-white cursor-pointer"
+        />
+
+        <ul id="list" class="p-1"></ul>
+      </div>
+    </div>
+  </body>
+  <script src="./main.js" type="module"></script>
+
+  <script src="./node_modules/socket.io-client/dist/socket.io.js"></script>
+</html>
